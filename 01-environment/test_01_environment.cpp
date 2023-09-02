@@ -2,7 +2,6 @@
 #include "../lib.h"
 
 TEST(TestGroupName, Subtest_1) {
-    std::cout << version() << " ver";
     ASSERT_TRUE(version() > 1);
 }
 

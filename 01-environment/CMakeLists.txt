@@ -10,7 +10,7 @@ target_compile_options(test_01_environment PRIVATE -Wall -Wextra -pedantic -Werr
 
 set_target_properties(01_environment test_01_environment PROPERTIES CXX_STANDARD 14 CXX_STANDARD_REQUIRED ON)
 
-gtest_discover_tests(test_01_environment)
+include(GoogleTest)
 
 install(TARGETS 01_environment RUNTIME DESTINATION bin)
 
