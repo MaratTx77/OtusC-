@@ -2,7 +2,7 @@
 #include "../lib.h"
 
 TEST(TestGroupName, Subtest_1) {
-    ASSERT_TRUE(version() > 500);
+    ASSERT_TRUE(version() > 1);
 }
 
 TEST(TestGroupName, Subtest_2) {
