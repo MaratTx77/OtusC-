@@ -24,3 +24,4 @@ set(CPACK_PACKAGE_DESCRIPTION "Otus c++ learning")
 set(CPACK_PACKAGE_CONTACT maratsr@ya.ru)
 include(CPack)
 
+add_test(helloworld_test helloworld_test)
