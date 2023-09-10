@@ -18,7 +18,7 @@ jobs:
       - run: sudo apt-get update && sudo apt-get install cmake libboost-all-dev -y
       - run: cmake . -DPATCH_VERSION=${{ github.run_number }}
       - run: cmake --build .
-      - run: ls -la build
+      - run: ls -la
 
       - name: Upload Example binary
         uses: actions/upload-artifact@v3
