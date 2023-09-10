@@ -8,6 +8,13 @@ set(PROJECT_VERSION 0.0.${PATCH_VERSION})
 project(learn_cpp_otus VERSION ${PROJECT_VERSION})
 include_directories(${PROJECT_BINARY_DIR})
 
+set (BOOST_ROOT "C:/boost")
+find_package(Boost REQUIRED regex system)
+if(Boost_FOUND)
+    message(STATUS "Found boost ${Boost_VERSION_STRING}")
+endif()
+
+
 # CMake dynamically generated file stored in main directory
 configure_file(version.h.in version.h)
 add_library(common_lib lib.cpp)
@@ -17,8 +24,7 @@ target_compile_options(common_lib PRIVATE -Wall -Wextra -pedantic -Werror)
 add_subdirectory(googletest)
 
 # Each separate lesson will be created with own CMake configuration inside XX-lesson_name subdirectory
-add_subdirectory(01-helloworld)
+# add_subdirectory(01-helloworld)
+add_subdirectory(02-ip_filter)
 
 set(CMAKE_CXX_STANDARD 14)
-
-
